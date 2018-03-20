@@ -1,0 +1,13 @@
+<!--list.wxml-->
+<view class="container">
+  <scroll-view  scroll-y>
+  <block wx:for="{{ records }}" wx:key="{{ records.id }}">
+    <card class="card" head="{{ item.title }}" date="{{ item.date }}" ></card>
+  </block>
+
+  <div class="add_div">
+    <image class="add" bindtap="_addRecord" src="../../images/add.png" mode="scaleToFill">
+    </image>
+  </div>
+  </scroll-view>
+</view>

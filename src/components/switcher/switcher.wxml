@@ -1,0 +1,5 @@
+<!--pages/new/switcher.wxml-->
+<view class="container">
+    <text>{{ title }}</text>
+    <switch checked bindchange="_switchChanged" color='#0984e3'></switch>
+</view>

@@ -1,0 +1,19 @@
+/* pages/new/switcher.wxss */
+.container {
+  display: flex;
+  height: 32px;
+  margin: 20rpx 40rpx;
+  border: 1px solid #e2e9fc;
+  border-radius: 8rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+text {
+  margin-left: 24rpx;
+  font-size: 14px;
+}
+
+switch {
+  margin-right: 2rpx;
+}

@@ -1,0 +1,41 @@
+/* pages/new/textEdit.wxss */
+.container {
+  display: flex;
+  height: 32px;
+  margin: 20rpx 40rpx;
+  background-color: #e2e9fc;
+  border-radius: 8rpx;
+  align-items: center;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  margin-left: 24rpx;
+}
+
+.input_p {
+  color: #95a5a6;
+}
+
+.input {
+  flex: 1;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+  font-size: 14px;
+}
+
+picker {
+  width: 100%;
+}
+
+.picker_input_p {
+  color: #95a5a6;
+}
+
+.picker_input {
+  flex: 1;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+  font-size: 14px;
+}

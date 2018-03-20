@@ -1,0 +1,53 @@
+/* pages/list/card.wxss */
+.container {
+  background-color: white;
+  border-radius: 12rpx;
+  height: 160rpx;
+  display: flex;
+  padding: 24rpx;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.header {
+  font-size: 16px;
+}
+
+.desc {
+  font-size: 12px;
+  color: #95a5a6;
+}
+
+.big {
+  font-size: 48px;
+}
+
+.small {
+  margin-left: 8rpx;
+  font-size: 12px;
+  color: #95a5a6;
+}
+
+.tool {
+  position: absolute;
+  margin-right: 24rpx;
+  margin-top: 0rpx;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+icon {
+  margin-right: 12rpx;
+}
+
+icon:first-child {
+  margin-right: 0;
+}

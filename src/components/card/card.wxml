@@ -1,0 +1,14 @@
+<!--pages/list/card.wxml-->
+<view class="container">
+  <view class="left">
+    <text class="desc">{{ formatted_date }}</text>
+    <text class="desc">距下个周年日: {{ comming_days }}天</text>
+    <text class="header">{{ head }}</text>
+  </view>
+  <text class="big">{{ past_days }}</text>
+  <text class="small">天</text>
+  <view class="tool">
+    <icon type="clear" size="20" color="#ff7979" />
+    <icon type="info" size="20" hidden='true' />
+  </view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "新增纪念日",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "textEdit": "../../components/textEdit/textEdit",
+    "switcher": "../../components/switcher/switcher",
+    "segment": "../../components/segment/segment"
+  }
+}

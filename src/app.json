@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/list/list",
+    "pages/new/new"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#3498db",
+    "navigationBarTitleText": "爱纪念",
+    "navigationBarTextStyle": "white",
+    "backgroundColorTop": "#eeeeee",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 0
+  }
+}

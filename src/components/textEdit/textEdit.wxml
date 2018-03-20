@@ -1,0 +1,12 @@
+<!--pages/new/textEdit.wxml-->
+<view class="container">
+    <image class="icon" mode="scaleToFill" src="{{ icon }}"></image>
+    <block wx:if="{{ isPicker == 'false' }}">
+      <input placeholder="{{ placeholder }}" class="input" placeholder-class="input_p" bindinput="_bindKeyInput"></input>
+    </block>
+    <block wx:else>
+      <picker mode="date" value="{{ date }}" start="1900-01-01" end="2099-01-01" bindchange="_bindDateChange">
+        <input placeholder="{{ placeholder }}" class="picker_input" placeholder-class="picker_input_p" value="{{ formatted_date }}" disabled="true"></input>
+      </picker>
+    </block>
+</view>

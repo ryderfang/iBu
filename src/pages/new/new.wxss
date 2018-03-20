@@ -1,0 +1,25 @@
+/* new.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  width: 200px;
+  position: fixed;
+  bottom: 30px;
+  align-self: center;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  border-radius: 17px;
+  background-color: #0984e3;
+}
+
+.segtext {
+  color: #95a5a6;
+  margin: 0rpx 40rpx;
+  font-size: 12px;
+}

@@ -1,0 +1,11 @@
+<!--components/segment/segment.wxml-->
+<view class="container">
+  <block wx:for="{{ titles }}" wx:for-index="idx" wx:key="*this">
+    <block wx:if="{{ idx == index }}">
+      <button class="btn select" bindtap='_btnClicked' id="{{ idx }}">{{ item }}</button>
+    </block>
+    <block wx:else>
+      <button class="btn" bindtap='_btnClicked' id="{{ idx }}">{{ item }}</button>
+    </block>
+  </block>
+</view>
