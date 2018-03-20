@@ -21,6 +21,17 @@ Page({
   },
 
   /**
+   * 删除项目
+   */
+  _onCardDelete: function (e) {
+    storage.deleteRecord(e.detail.value)
+    let r = storage.getAllRecords()
+    this.setData({
+      records: r
+    })
+  },
+
+  /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {

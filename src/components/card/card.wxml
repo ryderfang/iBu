@@ -8,7 +8,7 @@
   <text class="big">{{ past_days }}</text>
   <text class="small">天</text>
   <view class="tool">
-    <icon type="clear" size="20" color="#ff7979" />
-    <icon type="info" size="20" hidden='true' />
+    <icon type="clear" size="20" color="#ff7979" bindtap='_deleteRecord' />
+    <icon type="info" size="20" />
   </view>
 </view>

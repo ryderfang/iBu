@@ -2,7 +2,7 @@
 <view class="container">
   <scroll-view  scroll-y>
   <block wx:for="{{ records }}" wx:key="{{ records.id }}">
-    <card class="card" head="{{ item.title }}" date="{{ item.date }}" ></card>
+    <card class="card" head="{{ item.title }}" date="{{ item.date }}" idx="{{ item.id }}" bind:delete='_onCardDelete'></card>
   </block>
 
   <div class="add_div">
