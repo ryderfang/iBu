@@ -40,7 +40,8 @@ const addRecord = (obj) => {
   if (obj.data != undefined) {
     let t = wx.getStorageSync(RECORD_KEYS)
     let maxIdx = 0
-    if (t != undefined && t.constructor === Object) {
+    if (t != undefined && t.constructor === Object &&
+        Object.keys(t).length > 0) {
       maxIdx = Math.max.apply(null, Object.keys(t))
     } else {
       t = Object()
@@ -68,10 +69,7 @@ const deleteRecord = (idx) => {
     } else {
       t = Object()
     }
-    wx.setStorage({
-      key: RECORD_KEYS,
-      data: t
-    })
+    wx.setStorageSync('RECORD_KEYS', t)
   }
 }
 

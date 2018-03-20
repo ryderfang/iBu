@@ -11,10 +11,15 @@ page {
 
 scroll-view {
   background-color: #2980b9;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_div {
   min-height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 .card {
@@ -28,6 +33,7 @@ card:first-child {
 .add_div {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 24rpx;
 }
 
 .add {
