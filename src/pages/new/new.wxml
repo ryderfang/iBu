@@ -1,7 +1,7 @@
 <!--new.wxml-->
 <view class="container">
-    <textEdit placeholder="事件名称" icon="../../images/edit_pen.png" isPicker="false" bind:title="_titleChanged"></textEdit>
-    <textEdit placeholder="设定日期" icon="../../images/calendar.png" isPicker="true" bind:date="_dateChanged"></textEdit>
+    <textEdit placeholder="事件名称" icon="../../images/edit_pen.png" isPicker="false" text="{{ text_title }}" bind:title="_titleChanged"  ></textEdit>
+    <textEdit placeholder="设定日期" icon="../../images/calendar.png" isPicker="true" text="{{ text_date }}" bind:date="_dateChanged" ></textEdit>
     <switcher title="周年提醒"></switcher>
     <switcher title="提醒我准备礼物" bind:changed="_switchValueChanged"></switcher>
     <block wx:if="{{ show_segment }}">

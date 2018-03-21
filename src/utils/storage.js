@@ -59,6 +59,24 @@ const addRecord = (obj) => {
   }
 }
 
+const updateRecord = (obj) => {
+  if (obj.data != undefined) {
+    let t = wx.getStorageSync(RECORD_KEYS)
+    if (t != undefined && t.constructor === Object &&
+      Object.keys(t).length > 0) {
+      if (t[obj.data.id] != undefined) {
+        t[obj.data.id] = obj.data
+        wx.setStorage({
+          key: RECORD_KEYS,
+          data: t,
+          success: obj.success,
+          fail: obj.fail
+        })
+      }
+    }
+  }
+}
+
 const deleteRecord = (idx) => {
   if (idx != undefined) {
     let t = wx.getStorageSync(RECORD_KEYS)
@@ -76,5 +94,6 @@ const deleteRecord = (idx) => {
 module.exports = {
   getAllRecords: getAllRecords,
   addRecord: addRecord,
-  deleteRecord: deleteRecord
+  deleteRecord: deleteRecord,
+  updateRecord: updateRecord
 }

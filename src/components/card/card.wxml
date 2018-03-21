@@ -1,13 +1,13 @@
 <!--pages/list/card.wxml-->
-<view class="container">
+<view class="container" bindtap='_editRecord'>
   <view class="left">
     <text class="desc">{{ formatted_date }}</text>
     <text class="desc">距下个周年日: {{ comming_days }}天</text>
-    <text class="header">{{ head }}</text>
+    <text class="header">{{ title }}</text>
   </view>
   <text class="big">{{ past_days }}</text>
   <text class="small">天</text>
-  <view class="tool">
+  <view class="tool" catchtap='_catched'>
     <icon type="clear" size="20" color="#ff7979" bindtap='_deleteRecord' />
     <icon type="info" size="20" />
   </view>

@@ -3,7 +3,7 @@
   <scroll-view  scroll-y>
     <div class="card_div">
       <block wx:for="{{ records }}" wx:key="{{ records.id }}">
-        <card class="card" head="{{ item.title }}" date="{{ item.date }}" idx="{{ item.id }}" bind:delete='_onCardDelete'></card>
+        <card class="card" title="{{ item.title }}" date="{{ item.date }}" idx="{{ item.id }}" bind:delete='_onCardDelete' bind:edit='_onCardEdit'></card>
       </block>
     </div>
 

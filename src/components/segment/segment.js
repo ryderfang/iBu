@@ -21,7 +21,7 @@ Component({
     index: 0,
   },
 
-  attached: function (e) {
+  attached: function () {
     this.setData({
       index: this.properties.init_idx
     })

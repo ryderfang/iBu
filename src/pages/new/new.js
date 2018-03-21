@@ -24,6 +24,9 @@ Page({
     show_segment: true,
     segment_desc: '提前1天准备',
     segment_index: 0,
+
+    // idx
+    idx: '-1',
   },
 
   // Components Events
@@ -85,27 +88,55 @@ Page({
       return
     }
 
-    storage.addRecord({
-      data: {
-        title: this.data.text_title,
-        date: this.data.text_date
-      },
-      success: function (res) {
-        wx.navigateBack({
-          delta: 1
-        })
-      },
-      fail: function (res) {
-        console.log(res)
-      }
-    })
+    if (this.data.idx === '-1') {
+      storage.addRecord({
+        data: {
+          title: this.data.text_title,
+          date: this.data.text_date
+        },
+        success: function (res) {
+          wx.navigateBack({
+            delta: 1
+          })
+        },
+        fail: function (res) {
+          console.log(res)
+        }
+      })
+    } else {
+      storage.updateRecord({
+        data: {
+          id: this.data.idx,
+          title: this.data.text_title,
+          date: this.data.text_date
+        },
+        success: function (res) {
+          wx.navigateBack({
+            delta: 1
+          })
+        },
+        fail: function (res) {
+          console.log(res)
+        }
+      })
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      text_title: options.title || '',
+      text_date: options.date || '',
+      idx: options.idx || '-1'
+    })
+
+    if (options.idx != undefined) {
+      wx.setNavigationBarTitle({
+        title: '编辑',
+      })
+    }
   },
 
   /**

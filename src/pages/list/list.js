@@ -31,6 +31,12 @@ Page({
     })
   },
 
+  _onCardEdit: function (e) {
+    wx.navigateTo({
+      url: `../new/new?title=${e.detail.title}&date=${e.detail.date}&idx=${e.detail.idx}`,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

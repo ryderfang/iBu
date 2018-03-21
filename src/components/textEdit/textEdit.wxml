@@ -2,7 +2,7 @@
 <view class="container">
     <image class="icon" mode="scaleToFill" src="{{ icon }}"></image>
     <block wx:if="{{ isPicker == 'false' }}">
-      <input placeholder="{{ placeholder }}" class="input" placeholder-class="input_p" bindinput="_bindKeyInput"></input>
+      <input placeholder="{{ placeholder }}" class="input" placeholder-class="input_p" bindinput="_bindKeyInput" value="{{ title }}"></input>
     </block>
     <block wx:else>
       <picker mode="date" value="{{ date }}" start="1900-01-01" end="2099-01-01" bindchange="_bindDateChange">
